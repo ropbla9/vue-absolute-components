@@ -1,0 +1,63 @@
+.vac.black-layer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: -1;
+}
+.vac.black-layer.active {
+    opacity: 1;
+    z-index: 9994;
+}
+.vac.modal-vac {
+    transition: transform .25s, opacity 1ms .25s;
+}
+
+
+/* Dialogs */
+.vac.dialog-vac {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transition: 0.25s;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.vac.dialog-vac.active {
+    transition: 0.25s;
+    opacity: 1;
+}
+.vac.dialog-vac .wrapper {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.vac.dialog-vac .wrapper h1 {
+    font-size: 20px;
+    margin: 0px 0px 10px 0px;
+}
+.vac.dialog-vac .wrapper p {
+    margin: 0px 0px 10px 0px;
+}
+.vac.dialog-vac .wrapper .buttons {
+    text-align: right;
+}
+.vac.dialog-vac .wrapper .buttons button {
+    border: none;
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+}
+.vac.dialog-vac .wrapper .buttons button.ok {
+        background-color: #439dd2;
+}
+.vac.dialog-vac .wrapper .buttons button.cancel {
+    background-color: #969696;
+}

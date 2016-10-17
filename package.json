@@ -1,0 +1,14 @@
+{
+  "name": "vue-absolute-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "core.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+      "vue": "^2.0.1"
+  },
+  "author": "rop",
+  "license": "ISC"
+}
