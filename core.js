@@ -85,7 +85,7 @@ export default {
                     dialogs.$refs.prompt.placeHolder = options.placeHolder;
                     dialogs.$refs.prompt.callback = options.callback;
                     dialogs.$refs.prompt.active = true;
-                    /* $vm.choose({
+                    /* $vm.prompt({
                         title: "titulo",
                         message: "mensagem...",
                         buttonOk: "Ok",
