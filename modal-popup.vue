@@ -5,6 +5,7 @@
         height: 100vh;
         transition: 0.25s;
         opacity: 0;
+        z-index: -1;
         background-color: rgba(0,0,0,0.5);
     }
     .vac.modal-vac.modal-popup .wrapper {
@@ -26,7 +27,7 @@
 <template lang="html">
     <div> <!-- initial wrapper required by Vue2 -->
         <!-- Embedded blackayer on main element, where wrapper is the real content -->
-        <div class="vac modal-vac modal-popup" v-bind:class="{ active: active }" v-on:click="active = false">
+        <div class="vac modal-vac modal-popup" v-bind:class="{ active: active }">
             <div class="wrapper">
                 <slot></slot>
             </div>
@@ -38,6 +39,14 @@
     export default {
         props: {
             active: Boolean
+        },
+        mounted() {
+            var self = this;
+            window.addEventListener("click", function(e) {
+                if( new RegExp("vac modal-vac modal-popup").test(e.target.className) ) {
+                    self.active = false;
+                }
+            })
         }
     }
 </script>
