@@ -6,7 +6,7 @@ import vacAlert from "vue-aboslute-compoents/dialog-alert.vue";
 new Vue({
     template: `
         &lt;div&gt;
-            &lt;modal-half v-model="boolean"&gt; <!-- remm v-model is an alias for v-bind:value + v-on:input, that means this modal will emit input when you close it by the black layer, syncronyzing with your boolean, in other hand you may define a button to close it directly from the current component -->
+            &lt;modal-half v-model="boolean"&gt;
                 put anything you want on default slot,
                 there are no predefined styles
             &lt;/modal-half&gt;
@@ -19,6 +19,8 @@ new Vue({
     components: { halfModal, vacAlert }
 })
 </code></pre>
+
+<p>remm v-model is an alias for v-bind:value + v-on:input, that means this modal will emit input when you close it by the black layer, syncronyzing with your boolean, in other hand you may define a button to close it directly from the current component</p>
 
 <p><strong>Use with API</strong> (dialog components only)</p>
 
