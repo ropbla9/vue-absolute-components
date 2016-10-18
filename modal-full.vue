@@ -17,7 +17,7 @@
 
 <template lang="html">
     <div> <!-- initial wrapper required by Vue2 -->
-        <div class="vac modal-vac modal-full" v-bind:class="{ active: active }">
+        <div class="vac modal-vac modal-full" v-bind:class="{ active: value }">
             <slot></slot>
         </div>
     </div>
@@ -26,7 +26,7 @@
 <script>
     export default {
         props: {
-            active: Boolean
+            value: Boolean
         }
     }
 </script>

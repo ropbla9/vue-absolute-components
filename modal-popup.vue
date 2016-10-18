@@ -27,7 +27,7 @@
 <template lang="html">
     <div> <!-- initial wrapper required by Vue2 -->
         <!-- Embedded blackayer on main element, where wrapper is the real content -->
-        <div class="vac modal-vac modal-popup" v-bind:class="{ active: active }">
+        <div class="vac modal-vac modal-popup" v-bind:class="{ active: value }">
             <div class="wrapper">
                 <slot></slot>
             </div>
@@ -38,13 +38,13 @@
 <script>
     export default {
         props: {
-            active: Boolean
+            value: Boolean
         },
         mounted() {
             var self = this;
             window.addEventListener("click", function(e) {
                 if( new RegExp("vac modal-vac modal-popup").test(e.target.className) ) {
-                    self.active = false;
+                    self.$emit("input", false);
                 }
             })
         }

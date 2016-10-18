@@ -25,8 +25,8 @@
 
 <template lang="html">
     <div> <!-- initial wrapper required by Vue2 -->
-        <div class="vac black-layer" v-bind:class="{active: active}" v-on:click="active = false"></div>
-        <div class="vac modal-vac modal-side" v-bind:class="{active: active, left: side === 'left', right: side === 'right'}">
+        <div class="vac black-layer" v-bind:class="{active: value}" v-on:click="close()"></div>
+        <div class="vac modal-vac modal-side" v-bind:class="{active: value, left: side === 'left', right: side === 'right'}">
             <slot></slot>
         </div>
     </div>
@@ -35,8 +35,13 @@
 <script>
     export default {
         props: {
-            active: Boolean,
+            value: Boolean,
             side: String,
+        },
+        methods: {
+            close() {
+                this.$emit("input", false);
+            }
         }
     }
 </script>
