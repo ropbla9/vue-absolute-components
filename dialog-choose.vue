@@ -21,7 +21,7 @@
                 <h1>{{title}}</h1>
                 <p>{{message}}</p>
                 <ul>
-                    <li v-for="(button, index) in buttons" v-on:click="choose(index)">{{button}}</li>
+                    <li v-for="(button, index) in buttons" v-on:click="choose(index)" v-bind:style="{ backgroundColor: button.bgColor || '#439dd2'}">{{button.label}}</li>
                 </ul>
                 <div class="buttons">
                     <button class="cancel" v-on:click="cancel">{{buttonCancel}}</button>

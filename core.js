@@ -107,7 +107,10 @@ export default {
                     /* $vm.choose({
                         title: "titulo",
                         message: "mensagem...",
-                        buttons: ["button0", "button1"],
+                        buttons: [
+                            { label: "op 1", bgColor: "hex" },
+                            { label: "op 2", bgColor: "white" },
+                        ],
                         buttonCancel: "cancelar",
                         callback: function(btnIndex) {
                             console.log(btnIndex);
